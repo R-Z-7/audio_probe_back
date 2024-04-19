@@ -1,30 +1,20 @@
-# Audio Probe Backend
+# Audio Probe Backend (Node.js)
 
-![Node.js CI](https://img.shields.io/github/workflow/status/your-username/audio-probe-backend/Node.js%20CI)
-
-Audio Probe is a healthcare application designed to support the diagnostics and therapy of speech-related disorders. This repository hosts the Node.js-based backend that handles data management, authentication, and integration with speech analysis tools.
+This repository houses the Node.js backend for Audio Probe, a healthcare application that enables users to record and analyze their speech. This aids in the diagnostics and therapy of speech-related disorders.
 
 ## Features
 
-- **Secure Authentication**: Robust user authentication and authorization with JSON Web Tokens (JWT).
-- **Data Management**: Perform CRUD operations on patient records efficiently.
-- **Speech Analysis**: Integration with Praat software to analyze speech patterns.
-- **Scheduling**: API endpoints to manage appointments and user profiles.
+- **Secure Authentication**: Utilizes JSON Web Tokens (JWT) for user authentication and authorization.
+- **Data Management**: Supports CRUD operations to manage patient records effectively.
+- **Speech Analysis**: Integrates with Praat software for detailed speech analysis.
+- **Appointment Management**: Provides API endpoints for managing appointments and user profiles.
 
-## Getting Started
+## Technologies Used
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+- **Node.js**: The runtime environment for the application.
+- **Express.js**: The web application framework used to build the backend.
+- **MySQL**: The relational database for storing user and application data.
+- **JSON Web Tokens (JWT)**: Used for securing API endpoints through token-based authentication.
+- **Praat**: Software used for speech analysis, integrated via external commands.
+- **Sequelize ORM**: Object-Relational Mapping tool used to interact with MySQL from Node.js.
 
-### Prerequisites
-
-- Node.js
-- MySQL
-- Praat installed on the server
-
-### Installing
-
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/audio-probe-backend.git
-cd audio-probe-backend

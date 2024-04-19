@@ -1,8 +1,6 @@
 # Audio Probe Backend
 
 ![Node.js CI](https://img.shields.io/github/workflow/status/your-username/audio-probe-backend/Node.js%20CI)
-![License](https://img.shields.io/github/license/your-username/audio-probe-backend)
-![Last Commit](https://img.shields.io/github/last-commit/your-username/audio-probe-backend)
 
 Audio Probe is a healthcare application designed to support the diagnostics and therapy of speech-related disorders. This repository hosts the Node.js-based backend that handles data management, authentication, and integration with speech analysis tools.
 

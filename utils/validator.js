@@ -21,7 +21,7 @@ const getSchema = (type) => {
         case 'login': {
             return Joi.object().keys({
                 username: Joi.string().required(),
-                password: Joi.string().regex(/^[A-Za-z0-9]+$/).required()
+                password: Joi.string().required()
             })
         }
         default: {

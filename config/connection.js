@@ -8,17 +8,21 @@ const { Sequelize, DataTypes } = require('sequelize');
 //   {});
 // INITIALIZATION--
 const sequelize = new Sequelize(
-  database, username, password,
+  "audioprobe", // Replace with your database name
+  "rameesk", // Replace with your username
+  "rz7@4321", // Replace with your password
   {
-    port:3306,
-    host: host,
-    dialect: "mysql", dialectOptions: {
+    host: "dserver.mysql.database.azure.com",
+    dialect: "mysql",
+    port: 3306,
+    dialectOptions: {
       ssl: {
-        require: true, // Require SSL
-        rejectUnauthorized: false // Disable SSL certificate verification (for self-signed certificates)
+        require: true,
+        rejectUnauthorized: false
       }
     }
-  });
+  }
+);
 
 // AUTHENTICATION--
 sequelize.authenticate()

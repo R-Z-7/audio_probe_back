@@ -136,7 +136,7 @@ const getAudioAnalysis = async (req, res) => {
                     console.log(__basedir);
                     const directoryPath = path.join(__basedir,"routes","analysis","audios","/");
                     console.log("dp-->"+directoryPath);
-                   setTimeout(100,
+                   setTimeout(200,
                     fs.unlink(directoryPath+audio, (err) => {
                       if (err) {
                       console.error(err)
@@ -149,7 +149,7 @@ const getAudioAnalysis = async (req, res) => {
                     if (stderr) {
                         const audio = req.file.filename;
                     const directoryPath = path.join(__basedir,"routes","analysis","audios","/");
-                   setTimeout(100,
+                   setTimeout(200,
                     fs.unlink(directoryPath+audio, (err) => {
                       if (err) {
                       console.error(err)
@@ -163,7 +163,7 @@ const getAudioAnalysis = async (req, res) => {
                     } else {
                         const audio = req.file.filename;
                     const directoryPath = path.join(__basedir,"routes","analysis","audios","/");
-                   setTimeout(100,
+                   setTimeout(200,
                     fs.unlink(directoryPath+audio, (err) => {
                       if (err) {
                       console.error(err)

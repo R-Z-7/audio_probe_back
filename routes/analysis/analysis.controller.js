@@ -106,10 +106,11 @@ const deleteAnalysis = async (req, res) => {
 const getAudioAnalysis = async (req, res) => {
     const audioFilePath = path.join(__dirname,'audios');
     const praatFilePath = path.join(__dirname, 'praat-scripts');
-    // const praatPath = `${praatFilePath+"/praat "}`; 
+    const praatExecutablePath = path.join(praatFilePath, "praat");
+    const praatScriptPath = path.join(praatFilePath, "t10.praat");
+    const command = `${praatExecutablePath} ${praatScriptPath} ${audioFilePath}/`;
     try {
         console.log(path.join(audioFilePath, req.file.filename));
-        const command = `${praatFilePath+"/praat"+" "+praatFilePath+"/t10.praat"+" "+audioFilePath+"/"}`;
         console.log(command);
         if (req.file == undefined) {
             return res.send({ response: "failed", message: "You must -select an Audio file" });

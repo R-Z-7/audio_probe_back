@@ -147,9 +147,31 @@ const getAudioAnalysis = async (req, res) => {
                     }));
                 } else
                     if (stderr) {
+                        const audio = req.file.filename;
+                    const directoryPath = path.join(__basedir,"routes","analysis","audios","/");
+                   setTimeout(100,
+                    fs.unlink(directoryPath+audio, (err) => {
+                      if (err) {
+                      console.error(err)
+                    return
+                      }else{
+                      console.log("deleted audio successfully");
+                      }
+                    }));
                         res.status(500).send({ response: "failed", message: 'Praat command encountered an error' });
                         return;
                     } else {
+                        const audio = req.file.filename;
+                    const directoryPath = path.join(__basedir,"routes","analysis","audios","/");
+                   setTimeout(100,
+                    fs.unlink(directoryPath+audio, (err) => {
+                      if (err) {
+                      console.error(err)
+                    return
+                      }else{
+                      console.log("deleted audio successfully");
+                      }
+                    }));
                         res.status(500).send({ response: "failed", message: 'Error executing Praat command' });
                         return;
                     }
